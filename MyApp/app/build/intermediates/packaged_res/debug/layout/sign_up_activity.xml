@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <!--TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" /-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo1" />
+
+        <!--TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="BUAAJobHunting•注册"
+            android:textColor="#808080"
+            android:textSize="30dp"
+            android:textStyle="italic" /-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/UserNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/UserNameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入用户名"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/PassWordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/PassWordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入用户密码"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/MailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/MailEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入邮箱帐号"
+                    android:maxLength="25"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/v_codeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/v_codeEdit"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入邮箱验证码"
+                    android:maxLength="16"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+
+                <Button
+                    android:id="@+id/v_codeSendCommitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/translucent_button"
+                    android:padding="10dp"
+                    android:text="发送验证码"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/PhoneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入手机号"
+                    android:maxLength="16"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/SignUpCommitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/translucent_button"
+                    android:padding="15dp"
+                    android:text="确认注册"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/ReturnLoginButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/translucent_button"
+                    android:padding="15dp"
+                    android:text="返回登录"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

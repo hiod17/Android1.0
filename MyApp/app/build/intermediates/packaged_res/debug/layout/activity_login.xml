@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <!--TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" /-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/logo1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:gravity="center"
+            android:text="BUAAJobHunting•登录"
+            android:textColor="#808080"
+            android:textSize="30dp"
+            android:textStyle="italic"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/UserNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/UserNameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入用户名"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textSize="24dp"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/PassWordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/PassWordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/translucent_edit"
+                    android:hint="输入用户密码"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textSize="24dp"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/LoginButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/translucent_button"
+                    android:padding="15dp"
+                    android:text="登   录"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/SignUpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/translucent_button"
+                    android:padding="15dp"
+                    android:text="注   册"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"></Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="忘记密码？"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
