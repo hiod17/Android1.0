@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/activity_main.xml",
+        "source": "com.example.myappli.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/fragment_gallery.xml",
+        "source": "com.example.myappli.app-main-6:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/sign_up_activity.xml",
+        "source": "com.example.myappli.app-main-6:/layout/sign_up_activity.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/nav_header_main.xml",
+        "source": "com.example.myappli.app-main-6:/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/fragment_slideshow.xml",
+        "source": "com.example.myappli.app-main-6:/layout/fragment_slideshow.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/content_main.xml",
+        "source": "com.example.myappli.app-main-6:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/activity_reset_pwd.xml",
+        "source": "com.example.myappli.app-main-6:/layout/activity_reset_pwd.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/activity_login.xml",
+        "source": "com.example.myappli.app-main-6:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/fragment_home.xml",
+        "source": "com.example.myappli.app-main-6:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.myappli.app-mergeDebugResources-3:/layout/app_bar_main.xml",
+        "source": "com.example.myappli.app-main-6:/layout/app_bar_main.xml"
+    }
+]
