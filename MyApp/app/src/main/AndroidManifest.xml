@@ -17,10 +17,10 @@
 
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:theme="@style/Theme.MyAppli"
+        android:theme="@style/Theme.Myappli"
         tools:targetApi="31"
     android:usesCleartextTraffic="true">
-        <!--android:theme="@android.style/Theme.MyAppli.NoActionBar"-->
+        <!--android:theme="@android.style/Theme.Myappli.NoActionBar"-->
         <!--activity android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
@@ -45,12 +45,29 @@
         <activity
             android:name=".login.SignUpActivity"
             android:exported="true" />
+        <activity
+            android:name=".login.ResetPwdActivity"
+            android:exported="true"/>
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyAppli.NoActionBar" />
+            android:theme="@style/Theme.Myappli.NoActionBar" />
+
+        <activity android:name=".search.bosszp_jobActivity"
+            android:exported="true"/>
+
+        <activity android:name=".user.User"
+            android:exported="true"/>
+        <activity android:name=".user.ChangePwd_LogoutActivity"
+            android:exported="true"/>
+        <activity android:name=".user.FavoritejobActivity"
+            android:exported="true"/>
+        <activity android:name=".user.ReminderActivity"
+            android:exported="true"/>
+        <activity android:name=".user.RemindAddActivity"
+            android:exported="true"/>
 
     </application>
 

@@ -1,10 +1,6 @@
 package com.example.myappli.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
-import android.app.DownloadManager;
-import android.content.AsyncQueryHandler;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -17,24 +13,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myappli.MainActivity;
 import com.example.myappli.R;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.Normalizer;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.FormBody;
 import okhttp3.HttpUrl;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -54,15 +38,15 @@ public class SignUpActivity extends Activity {//AppCompat
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_up_activity);
+        setContentView(R.layout.activity_sign_up);
         EditText userName = (EditText) this.findViewById(R.id.UserNameEdit);
         EditText passWord = (EditText) this.findViewById(R.id.PassWordEdit);
         EditText email = (EditText) this.findViewById(R.id.MailEdit);
         EditText vcode = (EditText) this.findViewById(R.id.v_codeEdit);
         EditText phoneNum = (EditText) this.findViewById(R.id.PhoneEdit);
         Button v_codeGetButton = (Button) this.findViewById(R.id.v_codeSendCommitButton);
-        Button SignUpCommitButton = (Button) this.findViewById(R.id.SignUpCommitButton);
-        Button ReturnLoginButton = (Button) this.findViewById(R.id.ReturnLoginButton);
+        Button SignUpCommitButton = (Button) this.findViewById(R.id.CommitButton);
+        Button ReturnLoginButton = (Button) this.findViewById(R.id.ReturnButton);
         //mTextView = findViewById(R.id.textView);
 
         v_codeGetButton.setOnClickListener(new View.OnClickListener() {
@@ -206,8 +190,8 @@ public class SignUpActivity extends Activity {//AppCompat
             }else if(response.code() == 400){
                 Looper.prepare();
                 Toast.makeText(this,"验证码错误", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                //startActivity(intent);
                 Looper.loop();
             }
             else{

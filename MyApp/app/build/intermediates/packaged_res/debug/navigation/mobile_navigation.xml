@@ -15,7 +15,7 @@
         android:id="@+id/nav_gallery"
         android:name="com.example.myappli.chat.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/activity_user" />
 
     <fragment
         android:id="@+id/nav_slideshow"

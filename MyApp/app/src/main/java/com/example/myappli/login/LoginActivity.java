@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.myappli.MainActivity;
 import com.example.myappli.R;
+import com.example.myappli.search.*;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,7 +75,7 @@ public class LoginActivity extends Activity {//AppCompat
 
         resetPwd.setOnClickListener(
                 v -> {
-                    Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, ResetPwdActivity.class);
                     startActivity(intent);
                 }
         );
@@ -125,8 +126,8 @@ public class LoginActivity extends Activity {//AppCompat
                 try {
                     JSONObject j = new JSONObject(json);
                     //token tok= j.get("token").toString();//response.header()
-                    String token=j.get("token").toString();
-                    //request=request.newBuilder()
+                    token=j.get("token").toString();
+                    //request=request.newBuilder()String
                     //        .addHeader()
                     //        .build();
                     Log.v("TAG",token);

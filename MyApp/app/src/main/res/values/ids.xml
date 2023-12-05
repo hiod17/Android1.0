@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button" type="id" />
+    <item name="textView" type="id" />
+    <item name="UserNameEdit" type="id" />
+    <item name="PassWordEdit" type="id" />
+    <item name="LoginButton" type="id" />
+    <item name="SignUpButton" type="id" />
+    <item name="v_codeEdit" type="id" />
+    <item name="PhoneEdit" type="id" />
+    <item name="v_codeSendCommitButton" type="id" />
+    <item name="nav_view" type="id" />
+    <item name="nav_host_fragment_content_main" type="id" />
+    <item name="nav_search" type="id" />
+    <item name="nav_chat" type="id" />
+    <item name="nav_user" type="id" />
+    <item name="EnterButton" type="id" />
+    <item name="areaEdit" type="id" />
+    <item name="infoEdit" type="id" />
+    <item name="jobButton" type="id" />
+    <item name="companyButton" type="id"/>
+    <item name="change58Button" type="id"/>
+    <item name="changebossButton" type="id"/>
+    <item name="recyclerview" type="id" />
+</resources>

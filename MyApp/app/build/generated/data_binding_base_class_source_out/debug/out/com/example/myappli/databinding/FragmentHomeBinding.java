@@ -4,25 +4,71 @@ package com.example.myappli.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.myappli.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final DrawerLayout rootView;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final Button EnterButton;
+
+  @NonNull
+  public final LinearLayout LayoutButton;
+
+  @NonNull
+  public final EditText areaEdit;
+
+  @NonNull
+  public final Button change58button;
+
+  @NonNull
+  public final Button changebossButton;
+
+  @NonNull
+  public final Button companyButton;
+
+  @NonNull
+  public final EditText infoEdit;
+
+  @NonNull
+  public final Button jobButton;
+
+  @NonNull
+  public final RecyclerView recyclerview;
+
+  private FragmentHomeBinding(@NonNull DrawerLayout rootView, @NonNull Button EnterButton,
+      @NonNull LinearLayout LayoutButton, @NonNull EditText areaEdit,
+      @NonNull Button change58button, @NonNull Button changebossButton,
+      @NonNull Button companyButton, @NonNull EditText infoEdit, @NonNull Button jobButton,
+      @NonNull RecyclerView recyclerview) {
     this.rootView = rootView;
+    this.EnterButton = EnterButton;
+    this.LayoutButton = LayoutButton;
+    this.areaEdit = areaEdit;
+    this.change58button = change58button;
+    this.changebossButton = changebossButton;
+    this.companyButton = companyButton;
+    this.infoEdit = infoEdit;
+    this.jobButton = jobButton;
+    this.recyclerview = recyclerview;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +89,68 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public static FragmentHomeBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.EnterButton;
+      Button EnterButton = ViewBindings.findChildViewById(rootView, id);
+      if (EnterButton == null) {
+        break missingId;
+      }
 
-    return new FragmentHomeBinding((ConstraintLayout) rootView);
+      id = R.id.LayoutButton;
+      LinearLayout LayoutButton = ViewBindings.findChildViewById(rootView, id);
+      if (LayoutButton == null) {
+        break missingId;
+      }
+
+      id = R.id.areaEdit;
+      EditText areaEdit = ViewBindings.findChildViewById(rootView, id);
+      if (areaEdit == null) {
+        break missingId;
+      }
+
+      id = R.id.change58button;
+      Button change58button = ViewBindings.findChildViewById(rootView, id);
+      if (change58button == null) {
+        break missingId;
+      }
+
+      id = R.id.changebossButton;
+      Button changebossButton = ViewBindings.findChildViewById(rootView, id);
+      if (changebossButton == null) {
+        break missingId;
+      }
+
+      id = R.id.companyButton;
+      Button companyButton = ViewBindings.findChildViewById(rootView, id);
+      if (companyButton == null) {
+        break missingId;
+      }
+
+      id = R.id.infoEdit;
+      EditText infoEdit = ViewBindings.findChildViewById(rootView, id);
+      if (infoEdit == null) {
+        break missingId;
+      }
+
+      id = R.id.jobButton;
+      Button jobButton = ViewBindings.findChildViewById(rootView, id);
+      if (jobButton == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerview;
+      RecyclerView recyclerview = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerview == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((DrawerLayout) rootView, EnterButton, LayoutButton, areaEdit,
+          change58button, changebossButton, companyButton, infoEdit, jobButton, recyclerview);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
