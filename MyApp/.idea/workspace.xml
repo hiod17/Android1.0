@@ -123,29 +123,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "android-custom-viewC:/Users/Xu/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
-    "android-custom-viewC:/Users/Xu/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED": "View",
-    "android-custom-viewC:/Users/Xu/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED": "TextView",
-    "android-custom-viewC:/Users/Xu/Desktop/login-register-demo-master/Android1.0/MyApp/app/src/main/java/com/example/myappli/MyRecyclerView.java_SELECTED": "MyRecyclerView",
-    "android-custom-viewD:/Android/Sdk/sources/android-34/android/view/View.java_SELECTED": "View",
-    "android-custom-viewD:/Android/Sdk/sources/android-34/android/widget/Button.java_SELECTED": "Button",
-    "android-custom-viewD:/X1/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.6.1/ace9a78b961165396147e8691faa18c1b0e48e20/appcompat-1.6.1-sources.jar!/androidx/appcompat/widget/Toolbar.java_SELECTED": "Toolbar",
-    "android-custom-viewD:/X1/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
-    "android-custom-viewD:/X1/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.8.0/60ab9cfeed56173f0fb0c798009d91e049bbbba1/material-1.8.0-sources.jar!/com/google/android/material/appbar/AppBarLayout.java_SELECTED": "AppBarLayout",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/Xu/Desktop/MyApp(2) 2/MyApp/app/src/main/res/layout",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;android-custom-viewC:/Users/Xu/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
+    &quot;android-custom-viewC:/Users/Xu/AppData/Local/Android/Sdk/sources/android-34/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
+    &quot;android-custom-viewC:/Users/Xu/AppData/Local/Android/Sdk/sources/android-34/android/widget/TextView.java_SELECTED&quot;: &quot;TextView&quot;,
+    &quot;android-custom-viewC:/Users/Xu/Desktop/login-register-demo-master/Android1.0/MyApp/app/src/main/java/com/example/myappli/MyRecyclerView.java_SELECTED&quot;: &quot;MyRecyclerView&quot;,
+    &quot;android-custom-viewD:/Android/Sdk/sources/android-34/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
+    &quot;android-custom-viewD:/Android/Sdk/sources/android-34/android/widget/Button.java_SELECTED&quot;: &quot;Button&quot;,
+    &quot;android-custom-viewD:/X1/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.6.1/ace9a78b961165396147e8691faa18c1b0e48e20/appcompat-1.6.1-sources.jar!/androidx/appcompat/widget/Toolbar.java_SELECTED&quot;: &quot;Toolbar&quot;,
+    &quot;android-custom-viewD:/X1/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
+    &quot;android-custom-viewD:/X1/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.8.0/60ab9cfeed56173f0fb0c798009d91e049bbbba1/material-1.8.0-sources.jar!/com/google/android/material/appbar/AppBarLayout.java_SELECTED&quot;: &quot;AppBarLayout&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xu/Desktop/MyApp(2) 2/MyApp/app/src/main/res/layout&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Default Config" />
     <option name="BUILD_VARIANTS_TAB" value="Build Types" />
@@ -177,6 +177,7 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -243,6 +244,7 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -309,6 +311,7 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -375,6 +378,7 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -441,6 +445,7 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
