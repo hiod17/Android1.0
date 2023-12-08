@@ -35,7 +35,7 @@ public final class ActivityResetPwdBinding implements ViewBinding {
   public final EditText emailEdit;
 
   @NonNull
-  public final ImageView imageView3;
+  public final ImageView imageView2;
 
   @NonNull
   public final EditText passWordEdit;
@@ -51,7 +51,7 @@ public final class ActivityResetPwdBinding implements ViewBinding {
 
   private ActivityResetPwdBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout LayoutButton, @NonNull Button ResetCommitButton,
-      @NonNull Button ReturnButton, @NonNull EditText emailEdit, @NonNull ImageView imageView3,
+      @NonNull Button ReturnButton, @NonNull EditText emailEdit, @NonNull ImageView imageView2,
       @NonNull EditText passWordEdit, @NonNull EditText userNameEdit, @NonNull EditText vCodeEdit2,
       @NonNull Button vCodeSendCommitButton2) {
     this.rootView = rootView;
@@ -59,7 +59,7 @@ public final class ActivityResetPwdBinding implements ViewBinding {
     this.ResetCommitButton = ResetCommitButton;
     this.ReturnButton = ReturnButton;
     this.emailEdit = emailEdit;
-    this.imageView3 = imageView3;
+    this.imageView2 = imageView2;
     this.passWordEdit = passWordEdit;
     this.userNameEdit = userNameEdit;
     this.vCodeEdit2 = vCodeEdit2;
@@ -117,9 +117,9 @@ public final class ActivityResetPwdBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView3;
-      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView3 == null) {
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
         break missingId;
       }
 
@@ -148,7 +148,7 @@ public final class ActivityResetPwdBinding implements ViewBinding {
       }
 
       return new ActivityResetPwdBinding((ConstraintLayout) rootView, LayoutButton,
-          ResetCommitButton, ReturnButton, emailEdit, imageView3, passWordEdit, userNameEdit,
+          ResetCommitButton, ReturnButton, emailEdit, imageView2, passWordEdit, userNameEdit,
           vCodeEdit2, vCodeSendCommitButton2);
     }
     String missingId = rootView.getResources().getResourceName(id);

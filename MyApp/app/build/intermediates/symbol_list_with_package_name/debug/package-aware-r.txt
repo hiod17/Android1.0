@@ -3005,7 +3005,9 @@ id callMeasure
 id cancel_button
 id cardFooter
 id cardHeader
+id card_favorite
 id card_list
+id card_search
 id carryVelocity
 id center
 id centerCrop
@@ -3018,6 +3020,7 @@ id chains
 id change58Button
 id change58button
 id changebossButton
+id changeothersButton
 id chatMember
 id chatMessageEdit
 id chatTimeLeftEdit
@@ -3102,6 +3105,7 @@ id fade
 id favorite_button
 id favourite58button
 id favouritebossButton
+id favouriteotherButton
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3143,7 +3147,6 @@ id ignoreRequest
 id image
 id imageView
 id imageView2
-id imageView3
 id immediateStop
 id included
 id indeterminate
@@ -3156,6 +3159,8 @@ id item_touch_helper_previous_elevation
 id jobButton
 id job_Edit
 id job_tag_list_edit
+id jobsrc_Edit
+id jobsrc_Edit2
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3410,7 +3415,6 @@ id textStart
 id textTop
 id textView
 id textView3
-id textView4
 id text_gallery
 id text_input_end_icon
 id text_input_error_icon

@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\card_chat_list.xml"
     },
     {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_content_main.xml.flat",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\content_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable_ic_menu_gallery.xml.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\content_main.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_activity_chat_page.xml.flat",
@@ -120,8 +120,8 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable\\logo.jpg"
     },
     {
-        "merged": "com.example.myappli.app-merged_res-43:/layout_activity_search.xml.flat",
-        "source": "com.example.myappli.app-main-45:/layout/activity_search.xml"
+        "merged": "com.example.myappli.app-merged_res-43:/layout_activity_chat_page.xml.flat",
+        "source": "com.example.myappli.app-main-45:/layout/activity_chat_page.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable_ic_menu_camera.xml.flat",

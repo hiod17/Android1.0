@@ -96,33 +96,37 @@ public class ListActivity extends Activity {
                 .build();
         websocket = client.newWebSocket(request, new WebSocketListener() {
             public void onOpen(WebSocket webSocket, Response response) {
-                super.onOpen(webSocket, response);
+                        super.onOpen(webSocket, response);
                 Log.i("TAG","连接成功");
             }
-//            public void onMessage(WebSocket webSocket, String text) {
-//                super.onMessage(webSocket, text);
-//                System.out.println("收到text消息:" + text);
-//                JSONObject j;
-//                try {
-//                    j = new JSONObject(text);
-//                    if(j.get("from").toString().equals("0")) {
-//                        notification(j.get("msg").toString());
-//                    }else{
-//                        HistoryClass newmsg=new HistoryClass(j.getInt("from"),usermap.get(j.get("from")),
-//                                j.getInt("from"),j.getInt("to"),j.getString("msg"),j.getString("time"));
-//                        historyList.get(j.get("from").toString()).add(newmsg);//.add(j);
-//                    }
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                // webSocket.close( 1000,"再见");
-//            }
-//            public void onMessage(WebSocket webSocket, ByteString bytes){
-//                super.onMessage(webSocket, bytes);
-//                System.out.println("收到bytes消息:" + bytes);
-//            }
-        });
+            public void onMessage(WebSocket webSocket, String text) {
+                Log.i("TAG","on_message_begin" + text);
+                super.onMessage(webSocket, text);
+                System.out.println("收到text消息:" + text);
+                JSONObject j;
+                try {
+                    j = new JSONObject(text);
+                    if(j.get("from").toString().equals("0")) {
+                        notification(j.get("msg").toString());
+                    }else{
+                        HistoryClass newmsg=new HistoryClass(j.getInt("from"),usermap.get(j.get("from")),
+                                j.getInt("from"),j.getInt("to"),j.getString("msg"),j.getString("time"));
+                        historyList.get(j.get("from")).add(0,newmsg);//.add(j);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                // webSocket.close( 1000,"再见");
+            }
+
+            @Override
+            public void onMessage(WebSocket webSocket, ByteString bytes) {
+                super.onMessage(webSocket, bytes);
+                Log.i("TAG","on_message_byte_begin" + bytes);
+            }
+        })
+        ;
 
     }
     //显示通知栏
@@ -208,7 +212,7 @@ public class ListActivity extends Activity {
         if (jsondata != null) {
             if(user_id == 0){
                 Looper.prepare();
-                Toast.makeText(ListActivity.this,"来自系统",Toast.LENGTH_LONG).show();
+                //Toast.makeText(ListActivity.this,"来自系统",Toast.LENGTH_LONG).show();
 
 
                 JSONObject jsonObject = new JSONObject(jsondata);
@@ -244,7 +248,7 @@ public class ListActivity extends Activity {
                     //userList.add(userhistory);
                 }
                 historyList.put(user_id,chatList);
-            }userList.add(historyList.get(user_id).get(historyList.get(user_id).size()-1));
+            }userList.add(historyList.get(user_id).get(0));
 
             runOnUiThread(new Runnable() {
                 @Override

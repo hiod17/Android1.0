@@ -6,8 +6,10 @@ import static com.example.myappli.chat.ListActivity.historyList;
 import static com.example.myappli.chat.ListActivity.nowchatter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -16,12 +18,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myappli.MyRecyclerView;
 import com.example.myappli.R;
 
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
@@ -34,8 +41,14 @@ public class History_Send_Activity extends Activity {
 
     EditText message;
     Button send_button;
-    RecyclerView recyclerView;
-    MyAdapter myAdapter;
+    RecyclerView mrecyclerView;
+    MyAdapter mAdapter= new MyAdapter();
+    RecyclerView.AdapterDataObserver mObservable = new RecyclerView.AdapterDataObserver() {
+        @Override
+        public void onChanged() {
+            super.onChanged();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,25 +60,28 @@ public class History_Send_Activity extends Activity {
         TextView username = this.findViewById(R.id.chatMember);
         username.setText(nowchatter.username);
 
+        int total_history = historyList.get(nowchatter.userid).size();
+       //mAdapter.registerAdapterDataObserver(mObservable);
+       showhistory();
 
-        showhistory();
         send_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendmsg();
-                recyclerView = findViewById(R.id.chat_recycler);
-                LinearLayoutManager layoutManager = new LinearLayoutManager(History_Send_Activity.this);
-                layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-                layoutManager.setReverseLayout(true);
-                recyclerView.setLayoutManager(layoutManager);
-
-                myAdapter = new MyAdapter();
-                recyclerView.setAdapter(myAdapter);
-
-                // View header_view = getLayoutInflater().inflate(R.layout.card_header,null);
-                //  myAdapter.setHeaderView(header_view);
-                View footer_view = getLayoutInflater().inflate(R.layout.card_footer_chat, null);
-                myAdapter.setFooterView(footer_view);
+                message.setText("");
+//                mrecyclerView = findViewById(R.id.chat_recycler);
+//                LinearLayoutManager layoutManager = new LinearLayoutManager(History_Send_Activity.this);
+//                layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//                layoutManager.setReverseLayout(true);
+//                mrecyclerView.setLayoutManager(layoutManager);
+//
+//                mAdapter = new MyAdapter();
+//                mrecyclerView.setAdapter(mAdapter);
+//
+//                // View header_view = getLayoutInflater().inflate(R.layout.card_header,null);
+//                //  myAdapter.setHeaderView(header_view);
+//                View footer_view = getLayoutInflater().inflate(R.layout.card_footer_chat, null);
+//                mAdapter.setFooterView(footer_view);
 
             }
         });
@@ -73,19 +89,21 @@ public class History_Send_Activity extends Activity {
     }
 
     private void showhistory(){
-                recyclerView = findViewById(R.id.chat_recycler);
+                mrecyclerView = findViewById(R.id.chat_recycler);
                 LinearLayoutManager layoutManager = new LinearLayoutManager(History_Send_Activity.this);
                 layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
                 layoutManager.setReverseLayout(true);
-                recyclerView.setLayoutManager(layoutManager);
+                mrecyclerView.setLayoutManager(layoutManager);
 
-                myAdapter = new MyAdapter();
-                recyclerView.setAdapter(myAdapter);
+                //mAdapter = new MyAdapter();
+                mrecyclerView.setAdapter(mAdapter);
+                mrecyclerView.setFocusable(true);
+                mrecyclerView.setFocusableInTouchMode(true);
 
                 // View header_view = getLayoutInflater().inflate(R.layout.card_header,null);
                 //  myAdapter.setHeaderView(header_view);
                 View footer_view = getLayoutInflater().inflate(R.layout.card_footer_chat, null);
-                myAdapter.setFooterView(footer_view);
+                mAdapter.setFooterView(footer_view);
 
     }
     private void sendmsg(){
@@ -95,11 +113,16 @@ public class History_Send_Activity extends Activity {
         websocket.send(jsonObject);
 
         Date date =new Date();
-        HistoryClass newsend=new HistoryClass(nowchatter.userid,nowchatter.username,token.charAt(token.length()-1)-'0', nowchatter.userid, message.getText().toString(),"2023/12/10 00:00");
+        HistoryClass newsend= null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            newsend = new HistoryClass(nowchatter.userid,nowchatter.username,token.charAt(token.length()-1)-'0', nowchatter.userid, message.getText().toString(),date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toString());
+        }else{
+            newsend = new HistoryClass(nowchatter.userid,nowchatter.username,token.charAt(token.length()-1)-'0', nowchatter.userid, message.getText().toString(),date.toString());
+        }
         historyList.get(nowchatter.userid).add(0,newsend);//.add(j);
 
 
-        Toast.makeText(History_Send_Activity.this,"发送了"+jsonObject,Toast.LENGTH_LONG).show();
+        //Toast.makeText(History_Send_Activity.this,"发送了"+jsonObject,Toast.LENGTH_LONG).show();
     }
 
     class MyAdapter extends RecyclerView.Adapter<MyViewHoder> {
@@ -109,6 +132,7 @@ public class History_Send_Activity extends Activity {
         private final int LEFT_TYPE = 3;
         View headerView;
         View footerView;
+        HashMap<Integer,List<HistoryClass>> get_historyList = historyList;
         //String head = String.format("  共%d条结果",total_count);
 
         @Override
@@ -132,7 +156,7 @@ public class History_Send_Activity extends Activity {
             if(position == getItemCount()-1){
                 return;
             }
-            HistoryClass historys = historyList.get(nowchatter.userid).get(position);
+            HistoryClass historys = get_historyList.get(nowchatter.userid).get(position);
             if (historys.from==historys.userid){//send
                 holder.meaasge_left_edit.setText(historys.message);
                 holder.EditTimeLeft.setText(historys.time);
@@ -145,7 +169,7 @@ public class History_Send_Activity extends Activity {
 
         @Override
         public int getItemCount() {
-            return historyList.get(nowchatter.userid).size()+1;
+            return get_historyList.get(nowchatter.userid).size()+1;
         }
 
         public View getHeaderView() {
@@ -169,7 +193,7 @@ public class History_Send_Activity extends Activity {
             if(position == getItemCount()-1){
                 return FOOTER_TYPE;
             }
-            HistoryClass historys = historyList.get(nowchatter.userid).get(position);
+            HistoryClass historys = get_historyList.get(nowchatter.userid).get(position);
             if(historys.from==0) {
 
             }else if (historys.from==historys.userid){//send
@@ -177,6 +201,7 @@ public class History_Send_Activity extends Activity {
             }
             return RIGHT_TYPE;
         }
+
     }
 
     class MyViewHoder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -210,5 +235,4 @@ public class History_Send_Activity extends Activity {
     private interface IMyViewHolderClicks{
         public void onItemClick(View view,int ListClass);
     }
-
 }
