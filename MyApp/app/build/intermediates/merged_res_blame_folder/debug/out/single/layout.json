@@ -4,12 +4,16 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_changepwd_logout.xml"
     },
     {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\card_favorite.xml",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\card_favorite.xml"
+        "merged": "com.example.myappli.app-mergeDebugResources-42:/layout/activity_search.xml",
+        "source": "com.example.myappli.app-main-45:/layout/activity_search.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\fragment_gallery.xml",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\card_footer_chat.xml",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\card_footer_chat.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\card_msg_left.xml",
@@ -52,16 +56,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.myappli.app-mergeDebugResources-42:/layout/card_footer_chat.xml",
-        "source": "com.example.myappli.app-main-45:/layout/card_footer_chat.xml"
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\card_favourite.xml",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\card_favourite.xml"
-    },
-    {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\activity_chat_list.xml",
@@ -92,12 +92,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_reminder.xml"
     },
     {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\activity_user.xml",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_user.xml"
-    },
-    {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\sign_up_activity.xml",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\sign_up_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\activity_user.xml",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_user.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-mergeDebugResources-42:\\layout\\card_reminder.xml",

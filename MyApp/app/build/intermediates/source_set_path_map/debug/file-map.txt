@@ -37,10 +37,10 @@ com.example.myappli.app-jetified-activity-1.7.2-35 C:\Users\Xu\.gradle\caches\tr
 com.example.myappli.app-jetified-viewpager2-1.0.0-36 C:\Users\Xu\.gradle\caches\transforms-3\eb8d12571c5c2be05109bb388dd49c1e\transformed\jetified-viewpager2-1.0.0\res
 com.example.myappli.app-jetified-lifecycle-viewmodel-savedstate-2.6.2-37 C:\Users\Xu\.gradle\caches\transforms-3\f37167ebbee17e2873228cf3cba1d2d2\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\res
 com.example.myappli.app-transition-1.4.1-38 C:\Users\Xu\.gradle\caches\transforms-3\fe82a9ec3991ac6aef8657568f9c1294\transformed\transition-1.4.1\res
-com.example.myappli.app-pngs-39 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\build\generated\res\pngs\debug
-com.example.myappli.app-resValues-40 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\build\generated\res\resValues\debug
-com.example.myappli.app-packageDebugResources-41 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.myappli.app-packageDebugResources-42 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.myappli.app-merged_res-43 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\build\intermediates\merged_res\debug
-com.example.myappli.app-debug-44 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\src\debug\res
-com.example.myappli.app-main-45 C:\Users\Xu\Desktop\MyApp(2) 2\MyApp\app\src\main\res
+com.example.myappli.app-pngs-39 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\build\generated\res\pngs\debug
+com.example.myappli.app-resValues-40 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\build\generated\res\resValues\debug
+com.example.myappli.app-packageDebugResources-41 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.myappli.app-packageDebugResources-42 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.myappli.app-merged_res-43 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\build\intermediates\merged_res\debug
+com.example.myappli.app-debug-44 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\src\debug\res
+com.example.myappli.app-main-45 C:\Users\Xu\Desktop\login-register-demo-master\Android1.0\MyApp\app\src\main\res

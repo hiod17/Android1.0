@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable\\ic_menu_gallery.xml"
     },
     {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_activity_changepwd_logout.xml.flat",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_changepwd_logout.xml"
-    },
-    {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_activity_chat_page.xml.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_chat_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_activity_changepwd_logout.xml.flat",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_changepwd_logout.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\menu_activity_main_drawer.xml.flat",
@@ -96,12 +96,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable-xxxhdpi_bubble_right.9.png.flat",
@@ -116,12 +116,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable\\side_nav_bar.xml"
     },
     {
-        "merged": "com.example.myappli.app-merged_res-43:/layout_card_footer_chat.xml.flat",
-        "source": "com.example.myappli.app-main-45:/layout/card_footer_chat.xml"
-    },
-    {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable_logo.jpg.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "com.example.myappli.app-merged_res-43:/layout_activity_search.xml.flat",
+        "source": "com.example.myappli.app-main-45:/layout/activity_search.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable_ic_menu_camera.xml.flat",
@@ -150,10 +150,6 @@
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_card_favorite.xml.flat",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\card_favorite.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -204,12 +200,12 @@
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\activity_reminder.xml"
     },
     {
-        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable-xxhdpi_bubble_left.9.png.flat",
-        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable-xxhdpi\\bubble_left.9.png"
-    },
-    {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_nav_header_main.xml.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable-xxhdpi_bubble_left.9.png.flat",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\drawable-xxhdpi\\bubble_left.9.png"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable-xxxhdpi_bubble_left.9.png.flat",
@@ -246,6 +242,10 @@
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\layout_card_footer_chat.xml.flat",
+        "source": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-main-45:\\layout\\card_footer_chat.xml"
     },
     {
         "merged": "C:\\Users\\Xu\\.gradle\\daemon\\8.0\\com.example.myappli.app-merged_res-43:\\drawable-xxhdpi_bubble_right.9.png.flat",

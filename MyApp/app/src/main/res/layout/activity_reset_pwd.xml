@@ -13,45 +13,74 @@
         android:layout_gravity="center">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/logo1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:gravity="center"
+            android:text="BUAAJobHunting•忘记密码"
+            android:textColor="#808080"
+            android:textSize="30dp"
+            android:textStyle="italic"></TextView>
 
         <EditText
             android:id="@+id/userNameEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/translucent_edit"
-            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/translucent_edit"
             android:hint="输入用户名"
             android:padding="10dp"
             android:singleLine="true"
-            android:textSize="24dp" />
+            android:textSize="24dp"  />
 
         <EditText
             android:id="@+id/emailEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/translucent_edit"
             android:hint="输入注册时的邮箱"
             android:padding="10dp"
             android:singleLine="true"
-            android:textSize="24dp" />
+            android:textSize="24dp"  />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/v_codeEdit2"
-                android:layout_width="270dp"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/translucent_edit"
                 android:hint="输入邮箱验证码"
                 android:maxLength="16"
@@ -61,12 +90,17 @@
 
             <Button
                 android:id="@+id/v_codeSendCommitButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:background="@drawable/translucent_button"
+                android:padding="0dp"
                 android:text="发送验证码"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </LinearLayout>
 
@@ -74,12 +108,12 @@
             android:id="@+id/passWordEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/translucent_edit"
             android:hint="输入新密码"
-            android:inputType="textPassword"
-            android:maxLength="16"
             android:padding="10dp"
             android:singleLine="true"
             android:textSize="24dp" />
@@ -92,12 +126,12 @@
 
             <Button
                 android:id="@+id/ResetCommitButton"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/translucent_button"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:text="确认重设密码"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -108,12 +142,12 @@
 
             <Button
                 android:id="@+id/ReturnButton"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/translucent_button"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:text="返回登录"
                 android:textAlignment="center"
                 android:textColor="@color/white"

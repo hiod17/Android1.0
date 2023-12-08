@@ -34,7 +34,7 @@
             android:layout_marginTop="30dp"
             android:src="@drawable/logo1" />
 
-        <!--TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -42,7 +42,7 @@
             android:text="BUAAJobHunting•注册"
             android:textColor="#808080"
             android:textSize="30dp"
-            android:textStyle="italic" /-->
+            android:textStyle="italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,9 +59,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="5dp"
                     android:background="@drawable/translucent_edit"
                     android:hint="输入用户名"
                     android:padding="10dp"
@@ -80,9 +80,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="5dp"
                     android:background="@drawable/translucent_edit"
                     android:hint="输入用户密码"
                     android:inputType="textPassword"
@@ -102,9 +102,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="5dp"
                     android:background="@drawable/translucent_edit"
                     android:hint="输入邮箱帐号"
                     android:maxLength="25"
@@ -125,9 +125,9 @@
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="2dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="5dp"
                     android:background="@drawable/translucent_edit"
                     android:hint="输入邮箱验证码"
                     android:maxLength="16"
@@ -137,11 +137,11 @@
 
                 <Button
                     android:id="@+id/v_codeSendCommitButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:background="@drawable/translucent_button"
-                    android:padding="10dp"
+                    android:padding="0dp"
                     android:text="发送验证码"
                     android:textColor="@color/white"
                     android:textSize="20dp"
@@ -161,9 +161,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="5dp"
                     android:background="@drawable/translucent_edit"
                     android:hint="输入手机号"
                     android:maxLength="16"

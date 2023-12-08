@@ -114,7 +114,12 @@ public class ReminderActivity extends Activity {
             JSONObject jsonObject = new JSONObject(jsondata);
             total_count = jsonObject.getInt("total_count");
 
-            JSONArray jobs = jsonObject.getJSONArray("reminders");//遍历JSONArray对象，解析后放入集合中
+            JSONArray jobs = null;//遍历JSONArray对象，解析后放入集合中
+            try {
+                jobs = jsonObject.getJSONArray("reminders");//遍历JSONArray对象，解析后放入集合中
+            } catch (JSONException e) {
+                jobs = new JSONArray();
+            }
             for (int time = 0;time < jobs.length();time++) {
                 JSONObject jsonObject1 = jobs.getJSONObject(time);
                 int reminder_id = jsonObject1.getInt("reminder_id");

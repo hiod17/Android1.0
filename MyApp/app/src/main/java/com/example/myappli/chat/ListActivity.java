@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
@@ -77,7 +78,7 @@ public class ListActivity extends Activity {
         EditText area=this.findViewById(R.id.areaEdit);
         jobButton=this.findViewById(R.id.jobButton);
 
-        for(int i=1;i<=total_count_of_users;i++) {
+        for(int i=0;i<=total_count_of_users;i++) {
             okHttpGetHistory(i);
         }
         setonws();
@@ -138,10 +139,10 @@ public class ListActivity extends Activity {
             mManager.createNotificationChannel(mChannel);
 
             notification = new NotificationCompat.Builder(this, "default")
-                    .setContentTitle("标题")//设置通知栏标题
+                    .setContentTitle("BUAAJobHunting")//设置通知栏标题
                     .setContentText(message) //设置通知栏显示内容
                     .setWhen(System.currentTimeMillis())//通知产生的时间。
-                    //.setSmallIcon(R.mipmap.app_icon)//设置通知小ICON
+                    .setSmallIcon(R.drawable.logo1)//设置通知小ICON
                     .setDefaults(NotificationManager.IMPORTANCE_HIGH)
                     .setPriority(NotificationManager.IMPORTANCE_HIGH)
                     .setAutoCancel(true)
@@ -205,6 +206,19 @@ public class ListActivity extends Activity {
     private void jsonJXHistory(String jsondata,Response response,int user_id) throws JSONException {//解析JSON
         Log.i("TAD","history_jiexi_begin");
         if (jsondata != null) {
+            if(user_id == 0){
+                Looper.prepare();
+                Toast.makeText(ListActivity.this,"来自系统",Toast.LENGTH_LONG).show();
+
+
+                JSONObject jsonObject = new JSONObject(jsondata);
+                JSONArray jobs = jsonObject.getJSONArray("messages");
+                JSONObject jsonObject1 = jobs.getJSONObject(0);
+                String message = jsonObject1.getString("msg");
+                notification(message);
+                Looper.loop();
+                return;
+            }
             JSONObject jsonObject = new JSONObject(jsondata);
             int history_count = jsonObject.getInt("total_count");
             List<HistoryClass> chatList = new ArrayList<>();

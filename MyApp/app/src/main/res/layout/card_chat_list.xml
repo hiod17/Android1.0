@@ -55,10 +55,9 @@
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:padding="10dp"
                             android:singleLine="true"
                             android:textAlignment="textEnd"
-                            android:textSize="18dp" />
+                            android:textSize="16dp" />
 
                     </LinearLayout>
 
@@ -71,8 +70,7 @@
                         android:layout_marginRight="2dp"
                         android:singleLine="true"
                         android:textColor="@color/black"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                        android:textSize="18dp" />
 
                 </LinearLayout>
 

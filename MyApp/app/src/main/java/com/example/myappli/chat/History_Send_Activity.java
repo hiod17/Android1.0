@@ -44,8 +44,8 @@ public class History_Send_Activity extends Activity {
         setContentView(R.layout.activity_chat_page);
         message=this.findViewById(R.id.MessageEdit);
         send_button = this.findViewById(R.id.SendCommitButton);
-//        TextView username = this.findViewById(R.id.chatMember);
-//        username.setText(nowchatter.username);
+        TextView username = this.findViewById(R.id.chatMember);
+        username.setText(nowchatter.username);
 
 
         showhistory();
@@ -134,11 +134,11 @@ public class History_Send_Activity extends Activity {
             }
             HistoryClass historys = historyList.get(nowchatter.userid).get(position);
             if (historys.from==historys.userid){//send
-                holder.message_right_edit.setText(historys.message);
-                holder.EditTimeRight.setText(historys.time);
-            }else{
                 holder.meaasge_left_edit.setText(historys.message);
                 holder.EditTimeLeft.setText(historys.time);
+            }else{
+                holder.message_right_edit.setText(historys.message);
+                holder.EditTimeRight.setText(historys.time);
             }
         }
 
@@ -173,9 +173,9 @@ public class History_Send_Activity extends Activity {
             if(historys.from==0) {
 
             }else if (historys.from==historys.userid){//send
-                return RIGHT_TYPE;
+                return LEFT_TYPE;
             }
-            return LEFT_TYPE;
+            return RIGHT_TYPE;
         }
     }
 

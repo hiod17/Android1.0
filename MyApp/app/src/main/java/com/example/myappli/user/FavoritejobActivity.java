@@ -3,6 +3,8 @@ package com.example.myappli.user;
 import static com.example.myappli.MainActivity.token;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,6 +43,7 @@ import okhttp3.Response;
 public class FavoritejobActivity extends Activity {
     private Button company58Button;
     private Button companybossButton;
+    Button companyotherBUtton;
     public int companyButton = 0;
     public ArrayList<JobClass> user_favourite = new ArrayList<>();
     public int total_count;
@@ -52,6 +56,7 @@ public class FavoritejobActivity extends Activity {
         setContentView(R.layout.activity_favorite);
         company58Button = this.findViewById(R.id.favourite58button);
         companybossButton = this.findViewById(R.id.favouritebossButton);
+        companyotherBUtton=this.findViewById(R.id.favouriteotherButton);
 
         company58Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +75,14 @@ public class FavoritejobActivity extends Activity {
                 okhttpGetBoss();
             }
         });
+        companyotherBUtton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setEnable(companyotherBUtton);
+                companyButton=3;
+                okhttpGetother();
+            }
+        });
     }
 
     private void setEnable(Button btn) {
@@ -77,6 +90,7 @@ public class FavoritejobActivity extends Activity {
         if (buttonList2.size() == 0) {
             buttonList2.add(company58Button);
             buttonList2.add(companybossButton);
+            buttonList2.add(companyotherBUtton);
         }
 
         for (int i = 0; i < buttonList2.size(); i++) {
@@ -151,7 +165,39 @@ public class FavoritejobActivity extends Activity {
             }
         });
     }
+    private void okhttpGetother() {
+        OkHttpClient client = new OkHttpClient();
+        HttpUrl.Builder httpBuilder = HttpUrl.parse("http://39.105.180.206:9000/other_data/favorite").newBuilder();
 
+        Request request = new Request.Builder()
+                .url(httpBuilder.build())
+                .get()
+                .header("X-Token", token)//"336fe8bd-d08d-458f-84dc-94c6801a007a@1"
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                // Something went wrong
+                System.out.println("fail");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseStr = response.body().string();
+                    try {
+                        jsonGetotherData(responseStr, response);
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+                } else {
+                    // Request not successful
+                }
+            }
+        });
+    }
     private void jsonGet58Data(String jsondata, Response response) throws JSONException {//解析JSON
         Log.i("TAG", "--jiexi_Get_begin-");
         user_favourite = new ArrayList<>();
@@ -159,7 +205,12 @@ public class FavoritejobActivity extends Activity {
             JSONObject jsonObject = new JSONObject(jsondata);
             total_count = jsonObject.getInt("total_count");
 
-            JSONArray jobs = jsonObject.getJSONArray("jobs");//遍历JSONArray对象，解析后放入集合中
+            JSONArray jobs = null;//遍历JSONArray对象，解析后放入集合中
+            try {
+                jobs = jsonObject.getJSONArray("jobs");//遍历JSONArray对象，解析后放入集合中
+            } catch (JSONException e) {
+                jobs = new JSONArray();
+            }
             for (int time = 0; time < jobs.length(); time++) {
                 JSONObject jsonObject1 = jobs.getJSONObject(time);
                 int job_id = jsonObject1.getInt("job_id");
@@ -194,9 +245,9 @@ public class FavoritejobActivity extends Activity {
 
                 String job_url = jsonObject1.getString("job_url");
                 boolean get_is_full = jsonObject1.getBoolean("is_full");
-
+                boolean get_is_favor=jsonObject1.getBoolean("is_favor");
                 JobClass job = new JobClass(job_id, job_name, job_area, salary, long_tag_list,
-                        create_time, company_name, company_tag_list, job_url,get_is_full);
+                        create_time, company_name, company_tag_list, job_url,get_is_full,"58同城",get_is_favor);
                 user_favourite.add(job);
             }
             runOnUiThread(new Runnable() {
@@ -225,7 +276,12 @@ public class FavoritejobActivity extends Activity {
             JSONObject jsonObject = new JSONObject(jsondata);
             total_count = jsonObject.getInt("total_count");
 
-            JSONArray jobs = jsonObject.getJSONArray("jobs");//遍历JSONArray对象，解析后放入集合中
+            JSONArray jobs = null;//遍历JSONArray对象，解析后放入集合中
+            try {
+                jobs = jsonObject.getJSONArray("jobs");//遍历JSONArray对象，解析后放入集合中
+            } catch (JSONException e) {
+                jobs = new JSONArray();
+            }
             for (int time = 0;time < jobs.length();time++) {
                 JSONObject jsonObject1 = jobs.getJSONObject(time);
                 int job_id = jsonObject1.getInt("job_id");
@@ -274,9 +330,9 @@ public class FavoritejobActivity extends Activity {
 
                 String job_url = jsonObject1.getString("job_url");
                 boolean get_is_full = jsonObject1.getBoolean("is_full");
-
+                boolean get_is_favor=jsonObject1.getBoolean("is_favor");
                 JobClass job = new JobClass(job_id,job_name,job_area,salary,long_tag_list,
-                        hr_info,company_name,company_tag_list,job_url,get_is_full);
+                        hr_info,company_name,company_tag_list,job_url,get_is_full,"boss直聘",get_is_favor);
                 user_favourite.add(job);
             }
             runOnUiThread(new Runnable() {
@@ -293,6 +349,77 @@ public class FavoritejobActivity extends Activity {
                     View header_view = getLayoutInflater().inflate(R.layout.card_header,null);
                     myAdapter.setHeaderView(header_view);
                     View footer_view = getLayoutInflater().inflate(R.layout.card_footer,null);
+                    myAdapter.setFooterView(footer_view);
+                }
+            });
+        }
+    }
+    private void jsonGetotherData(String jsondata, Response response) throws JSONException {//解析JSON
+        Log.i("TAG", "--jiexi_Get_begin-");
+        user_favourite = new ArrayList<>();
+        if (jsondata != null) {
+            JSONObject jsonObject = new JSONObject(jsondata);
+            total_count = jsonObject.getInt("total_count");
+
+            JSONArray jobs = null;//遍历JSONArray对象，解析后放入集合中
+            try {
+                jobs = jsonObject.getJSONArray("jobs");//遍历JSONArray对象，解析后放入集合中
+            } catch (JSONException e) {
+                jobs = new JSONArray();
+            }
+            for (int time = 0; time < jobs.length(); time++) {
+                JSONObject jsonObject1 = jobs.getJSONObject(time);
+                int job_id = jsonObject1.getInt("job_id");
+
+                String company_name = jsonObject1.getString("company_name");
+
+                String create_time = jsonObject1.getString("created_at");
+
+                String job_area = jsonObject1.getString("job_area");
+
+                //JSONArray get_job_need = jsonObject1.getJSONArray("job_need");
+                String long_tag_list = jsonObject1.getString("job_need");
+                /*for (int i = 0; i < get_job_need.length(); i++) {
+                    String temp;
+                    temp = long_tag_list;
+                    String tag = get_job_need.getString(i);
+                    long_tag_list = temp + "  " + tag + "  ";
+                }*/
+
+                String job_name = jsonObject1.getString("job_name");
+
+                String salary = jsonObject1.getString("salary");
+
+                //JSONArray get_company_tag_list = jsonObject1.getJSONArray("job_desc");
+                String company_tag_list = jsonObject1.getString("job_desc");
+                /*for (int i = 1; i < get_company_tag_list.length(); i++) {
+                    String temp;
+                    temp = company_tag_list;
+                    String tag = get_company_tag_list.getString(i);
+                    company_tag_list = temp + "  " + tag + "  ";
+                }*/
+
+                String job_url = jsonObject1.getString("job_url");
+                String job_src=jsonObject1.getString("job_src");
+                boolean get_is_full = jsonObject1.getBoolean("is_full");
+                boolean get_is_favor=jsonObject1.getBoolean("is_favor");
+                JobClass job = new JobClass(job_id, job_name, job_area, salary, long_tag_list,
+                        create_time, company_name, company_tag_list, job_url,get_is_full,job_src,get_is_favor);
+                user_favourite.add(job);
+            }
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    recyclerView = findViewById(R.id.recyclerview);
+                    LinearLayoutManager layoutManager = new LinearLayoutManager(FavoritejobActivity.this);
+                    layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+                    recyclerView.setLayoutManager(layoutManager);
+
+                    myAdapter = new FavoritejobActivity.MyAdapter();
+                    recyclerView.setAdapter(myAdapter);
+                    View header_view = getLayoutInflater().inflate(R.layout.card_header, null);
+                    myAdapter.setHeaderView(header_view);
+                    View footer_view = getLayoutInflater().inflate(R.layout.card_footer, null);
                     myAdapter.setFooterView(footer_view);
                 }
             });
@@ -344,6 +471,8 @@ public class FavoritejobActivity extends Activity {
                         httpBuilder = HttpUrl.parse("http://39.105.180.206:9000/boss_data/favorite").newBuilder();
                     } else if (companyButton == 2) {
                         httpBuilder = HttpUrl.parse("http://39.105.180.206:9000/58_data/favorite").newBuilder();
+                    }else if(companyButton==3){
+                        httpBuilder = HttpUrl.parse("http://39.105.180.206:9000/other_data/favorite").newBuilder();
                     }
                     httpBuilder.addQueryParameter("id", String.valueOf(user_favourite.get(position-1).job_id));
 
@@ -365,7 +494,7 @@ public class FavoritejobActivity extends Activity {
                             if (response.code() == 200) {
                                 words = "已删除";
                                 Looper.prepare();
-                                Toast.makeText(FavoritejobActivity.this,"删除成功，请刷新", Toast.LENGTH_LONG).show();
+                                Toast.makeText(FavoritejobActivity.this,"删除成功", Toast.LENGTH_LONG).show();
                                 Looper.loop();
                             }else{
                                 words="失败";
@@ -396,10 +525,18 @@ public class FavoritejobActivity extends Activity {
             holder.hr_edit.setText(jobs.hr_info);
             holder.location_edit.setText(jobs.job_area);
             holder.company_name.setText(jobs.company_name + ":");
+            holder.jobsrc.setText("来源:"+jobs.job_src);
             String strisfull;
             if (jobs.is_full) strisfull="已满";
             else strisfull="未满";
             holder.full_edit.setText(strisfull);
+            holder.card_fav.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(jobs.job_url));
+                    startActivity(intent);
+                }
+            });
         }
 
 
@@ -446,10 +583,12 @@ public class FavoritejobActivity extends Activity {
         TextView company_name;
         TextView card_header;
         TextView full_edit;
+        TextView jobsrc;
         Button delete_Button;
-        FavoritejobActivity.IMyViewHolderClicks mListener;
+        CardView card_fav;
+        IMyViewHolderClicks mListener;
 
-        public MyViewHoder(View itemView, FavoritejobActivity.IMyViewHolderClicks Listener) {
+        public MyViewHoder(View itemView, IMyViewHolderClicks Listener) {
             super(itemView);
             mListener = Listener;
             delete_Button = itemView.findViewById(R.id.DeleteButton);
@@ -462,7 +601,9 @@ public class FavoritejobActivity extends Activity {
             hr_edit = itemView.findViewById(R.id.hr_Edit);
             location_edit = itemView.findViewById(R.id.location_Edit);
             company_name = itemView.findViewById(R.id.Compony_name_edit);
+            jobsrc=itemView.findViewById(R.id.jobsrc_Edit2);
             card_header = itemView.findViewById(R.id.cardHeader);
+            card_fav=itemView.findViewById(R.id.card_favorite);
         }
 
         public MyViewHoder(View itemView) {
@@ -475,7 +616,9 @@ public class FavoritejobActivity extends Activity {
             hr_edit = itemView.findViewById(R.id.hr_Edit);
             location_edit = itemView.findViewById(R.id.location_Edit);
             company_name = itemView.findViewById(R.id.Compony_name_edit);
+            jobsrc=itemView.findViewById(R.id.jobsrc_Edit2);
             card_header = itemView.findViewById(R.id.cardHeader);
+            card_fav=itemView.findViewById(R.id.card_favorite);
         }
 
         @Override
