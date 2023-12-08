@@ -1,6 +1,8 @@
 package com.example.myappli.chat;
 
-public class HistoryClass {
+import java.io.Serializable;
+
+public class HistoryClass implements Serializable {
     public int userid;
     public String username;
     public int from;

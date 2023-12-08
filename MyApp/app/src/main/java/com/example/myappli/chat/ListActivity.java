@@ -111,7 +111,10 @@ public class ListActivity extends Activity {
                     }else{
                         HistoryClass newmsg=new HistoryClass(j.getInt("from"),usermap.get(j.get("from")),
                                 j.getInt("from"),j.getInt("to"),j.getString("msg"),j.getString("time"));
-                        historyList.get(j.get("from")).add(0,newmsg);//.add(j);
+                        Intent intent = new Intent("CHAT_DATA_RECEIVE");
+                        intent.putExtra("updatedData", newmsg);
+                        sendBroadcast(intent);
+                        //historyList.get(j.get("from")).add(0,newmsg);//.add(j);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
