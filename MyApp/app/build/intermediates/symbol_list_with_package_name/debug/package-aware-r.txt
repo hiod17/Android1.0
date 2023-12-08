@@ -2761,6 +2761,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable bubble_left
+drawable bubble_right
 drawable button_changer
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2871,6 +2873,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id ChangeCommitButton
+id ChatterNameEdit
 id CommitButton
 id Compony_name_edit
 id Compony_tag_list_edit
@@ -2884,6 +2887,7 @@ id LogoutButton
 id META
 id MailEdit
 id MailLayout
+id MessageEdit
 id NO_DEBUG
 id NewpassWord
 id OldpassWord
@@ -2898,10 +2902,12 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id SendCommitButton
 id SignUpButton
 id SignUpCommitButton
 id TOP_END
 id TOP_START
+id TimeEdit
 id UserNameEdit
 id UserNameLayout
 id accelerate
@@ -2999,6 +3005,7 @@ id callMeasure
 id cancel_button
 id cardFooter
 id cardHeader
+id card_list
 id carryVelocity
 id center
 id centerCrop
@@ -3011,6 +3018,11 @@ id chains
 id change58Button
 id change58button
 id changebossButton
+id chatMember
+id chatMessageEdit
+id chatTimeLeftEdit
+id chatTimeRightEdit
+id chat_recycler
 id checkbox
 id checked
 id chronometer
@@ -3192,6 +3204,8 @@ id material_value_index
 id matrix
 id message
 id messageEdit
+id message_left
+id message_right
 id middle
 id mini
 id mobile_navigation
@@ -3564,6 +3578,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_changepwd_logout
+layout activity_chat_list
+layout activity_chat_page
 layout activity_favorite
 layout activity_login
 layout activity_main
@@ -3574,12 +3590,17 @@ layout activity_search
 layout activity_sign_up
 layout activity_user
 layout app_bar_main
+layout card_chat_list
 layout card_favourite
 layout card_footer
+layout card_footer_chat
 layout card_header
+layout card_msg_left
+layout card_msg_right
 layout card_reminder
 layout card_with_line
 layout content_main
+layout content_test
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

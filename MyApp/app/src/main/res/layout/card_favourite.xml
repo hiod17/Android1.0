@@ -164,11 +164,11 @@
 
                         <TextView
                             android:id="@+id/fullEdit"
-                            android:layout_width="10dp"
-                            android:layout_height="35dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@drawable/set_bar"
-                            android:text="是否提醒"
+                            android:text="是否收藏"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="10dp" />

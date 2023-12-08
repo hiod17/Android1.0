@@ -12,6 +12,8 @@ dimen activity_vertical_margin
 dimen fab_margin
 dimen nav_header_height
 dimen nav_header_vertical_spacing
+drawable bubble_left
+drawable bubble_right
 drawable button_changer
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -27,6 +29,7 @@ drawable translucent_button_enabled
 drawable translucent_edit
 drawable translucent_nonbutton
 id ChangeCommitButton
+id ChatterNameEdit
 id CommitButton
 id Compony_name_edit
 id Compony_tag_list_edit
@@ -38,6 +41,7 @@ id LoginButton
 id LogoutButton
 id MailEdit
 id MailLayout
+id MessageEdit
 id NewpassWord
 id OldpassWord
 id PassWordEdit
@@ -46,8 +50,10 @@ id PhoneEdit
 id ResetCommitButton
 id ReturnButton
 id ReturnLoginButton
+id SendCommitButton
 id SignUpButton
 id SignUpCommitButton
+id TimeEdit
 id UserNameEdit
 id UserNameLayout
 id action_settings
@@ -56,9 +62,15 @@ id areaEdit
 id button
 id cardFooter
 id cardHeader
+id card_list
 id change58Button
 id change58button
 id changebossButton
+id chatMember
+id chatMessageEdit
+id chatTimeLeftEdit
+id chatTimeRightEdit
+id chat_recycler
 id companyButton
 id deletebutton
 id dp
@@ -85,6 +97,8 @@ id line4layout
 id linearLayout
 id location_Edit
 id messageEdit
+id message_left
+id message_right
 id mobile_navigation
 id nav_chat
 id nav_gallery
@@ -116,6 +130,8 @@ id v_codeLayout
 id v_codeSendCommitButton
 id v_codeSendCommitButton2
 layout activity_changepwd_logout
+layout activity_chat_list
+layout activity_chat_page
 layout activity_favorite
 layout activity_login
 layout activity_main
@@ -126,12 +142,17 @@ layout activity_search
 layout activity_sign_up
 layout activity_user
 layout app_bar_main
+layout card_chat_list
 layout card_favourite
 layout card_footer
+layout card_footer_chat
 layout card_header
+layout card_msg_left
+layout card_msg_right
 layout card_reminder
 layout card_with_line
 layout content_main
+layout content_test
 layout fragment_gallery
 layout fragment_home
 layout fragment_slideshow

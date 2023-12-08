@@ -116,6 +116,7 @@ public class LoginActivity extends Activity {//AppCompat
 
     }
 
+
     private void jsonJXData(String json,Response response) throws IOException {//解析JSON
         if (json != null) {
             //JSONObject jsonobject = new JSONObject(jsondata);

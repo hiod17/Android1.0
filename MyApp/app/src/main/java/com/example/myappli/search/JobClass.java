@@ -12,7 +12,7 @@ public class JobClass {
     public String company_tag_list;
     public String long_tag_list;
     public String job_url;
-    boolean is_full;
+    public boolean is_full;
 
 
 

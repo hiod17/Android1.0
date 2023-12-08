@@ -2760,6 +2760,8 @@ int drawable btn_radio_off_mtrl 0x7f07007e
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f07007f
 int drawable btn_radio_on_mtrl 0x7f070080
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070081
+int drawable bubble_left 0x7f0700eb
+int drawable bubble_right 0x7f0700ec
 int drawable button_changer 0x7f070082
 int drawable design_fab_background 0x7f070083
 int drawable design_ic_visibility 0x7f070084
@@ -2870,6 +2872,7 @@ int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
 int id CTRL 0x7f080003
 int id ChangeCommitButton 0x7f080004
+int id ChatterNameEdit 0x7f08025b
 int id CommitButton 0x7f080005
 int id Compony_name_edit 0x7f080006
 int id Compony_tag_list_edit 0x7f080007
@@ -2883,6 +2886,7 @@ int id LogoutButton 0x7f08000d
 int id META 0x7f08000e
 int id MailEdit 0x7f08000f
 int id MailLayout 0x7f080010
+int id MessageEdit 0x7f08024e
 int id NO_DEBUG 0x7f080011
 int id NewpassWord 0x7f080012
 int id OldpassWord 0x7f080013
@@ -2897,10 +2901,12 @@ int id SHOW_ALL 0x7f08001b
 int id SHOW_PATH 0x7f08001c
 int id SHOW_PROGRESS 0x7f08001d
 int id SYM 0x7f08001e
+int id SendCommitButton 0x7f08024f
 int id SignUpButton 0x7f08001f
 int id SignUpCommitButton 0x7f080020
 int id TOP_END 0x7f080021
 int id TOP_START 0x7f080022
+int id TimeEdit 0x7f08025c
 int id UserNameEdit 0x7f080023
 int id UserNameLayout 0x7f080024
 int id accelerate 0x7f080025
@@ -2998,6 +3004,7 @@ int id callMeasure 0x7f080080
 int id cancel_button 0x7f080081
 int id cardFooter 0x7f080082
 int id cardHeader 0x7f080083
+int id card_list 0x7f08025e
 int id carryVelocity 0x7f080084
 int id center 0x7f080085
 int id centerCrop 0x7f080086
@@ -3010,6 +3017,11 @@ int id chains 0x7f08008c
 int id change58Button 0x7f08008d
 int id change58button 0x7f08008e
 int id changebossButton 0x7f08008f
+int id chatMember 0x7f080250
+int id chatMessageEdit 0x7f08025d
+int id chatTimeLeftEdit 0x7f080255
+int id chatTimeRightEdit 0x7f080256
+int id chat_recycler 0x7f08025f
 int id checkbox 0x7f080090
 int id checked 0x7f080091
 int id chronometer 0x7f080092
@@ -3191,6 +3203,8 @@ int id material_value_index 0x7f08013e
 int id matrix 0x7f08013f
 int id message 0x7f080140
 int id messageEdit 0x7f080141
+int id message_left 0x7f080252
+int id message_right 0x7f08025a
 int id middle 0x7f080142
 int id mini 0x7f080143
 int id mobile_navigation 0x7f080144
@@ -3563,6 +3577,8 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_changepwd_logout 0x7f0b001c
+int layout activity_chat_list 0x7f0b0080
+int layout activity_chat_page 0x7f0b0081
 int layout activity_favorite 0x7f0b001d
 int layout activity_login 0x7f0b001e
 int layout activity_main 0x7f0b001f
@@ -3573,12 +3589,17 @@ int layout activity_search 0x7f0b0023
 int layout activity_sign_up 0x7f0b0024
 int layout activity_user 0x7f0b0025
 int layout app_bar_main 0x7f0b0026
+int layout card_chat_list 0x7f0b0082
 int layout card_favourite 0x7f0b007f
 int layout card_footer 0x7f0b0028
+int layout card_footer_chat 0x7f0b0086
 int layout card_header 0x7f0b0029
+int layout card_msg_left 0x7f0b0083
+int layout card_msg_right 0x7f0b0084
 int layout card_reminder 0x7f0b002a
 int layout card_with_line 0x7f0b002b
 int layout content_main 0x7f0b002c
+int layout content_test 0x7f0b0085
 int layout custom_dialog 0x7f0b002d
 int layout design_bottom_navigation_item 0x7f0b002e
 int layout design_bottom_sheet_dialog 0x7f0b002f

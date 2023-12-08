@@ -30,7 +30,7 @@ android {
         viewBinding = true
     }
     //dataBinding{
-      //  enabled = true
+    //  enabled = true
     //}
     buildToolsVersion = "30.0.3"
 }
@@ -45,6 +45,8 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
     implementation("androidx.navigation:navigation-fragment:2.7.5")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    //webSocket
+    implementation("org.java-websocket:Java-WebSocket:1.5.2")
     //implementation ("com.jzxiang.pickerview:TimePickerDialog:1.0.1")
     //implementation ("com.contrarywind:Android-PickerView:3.2.7")
     testImplementation("junit:junit:4.13.2")
