@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -165,7 +166,7 @@ public class FavoritejobActivity extends Activity {
 
                 String company_name = jsonObject1.getString("company_name");
 
-                String hr_info = null;
+                String create_time = jsonObject1.getString("created_at");
 
                 String job_area = jsonObject1.getString("job_area");
 
@@ -195,7 +196,7 @@ public class FavoritejobActivity extends Activity {
                 boolean get_is_full = jsonObject1.getBoolean("is_full");
 
                 JobClass job = new JobClass(job_id, job_name, job_area, salary, long_tag_list,
-                        hr_info, company_name, company_tag_list, job_url,get_is_full);
+                        create_time, company_name, company_tag_list, job_url,get_is_full);
                 user_favourite.add(job);
             }
             runOnUiThread(new Runnable() {
@@ -395,6 +396,10 @@ public class FavoritejobActivity extends Activity {
             holder.hr_edit.setText(jobs.hr_info);
             holder.location_edit.setText(jobs.job_area);
             holder.company_name.setText(jobs.company_name + ":");
+            String strisfull;
+            if (jobs.is_full) strisfull="已满";
+            else strisfull="未满";
+            holder.full_edit.setText(strisfull);
         }
 
 

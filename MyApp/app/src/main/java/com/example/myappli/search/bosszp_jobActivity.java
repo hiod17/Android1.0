@@ -1,7 +1,9 @@
 package com.example.myappli.search;
 
 import static com.example.myappli.MainActivity.token;
-import static com.example.myappli.MainActivity.user_favourite;
+import static com.example.myappli.MainActivity.total_count_of_users;
+import static com.example.myappli.MainActivity.user_list;
+import static com.example.myappli.MainActivity.usermap;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,12 +27,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myappli.MainActivity;
 import com.example.myappli.R;
+import com.example.myappli.chat.UserList;
 import com.example.myappli.login.SignUpActivity;
 
 import org.json.JSONArray;
@@ -39,7 +43,10 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -85,6 +92,8 @@ public class bosszp_jobActivity extends Activity implements HomeFragment.OnFragm
         change58Button =this.findViewById(R.id.change58button);
         changebossButton =this.findViewById(R.id.changebossButton);
         favouriteButton = this.findViewById(R.id.FavouriteButton);
+
+        okHttpGetUser();
 
         jobButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -220,6 +229,41 @@ public class bosszp_jobActivity extends Activity implements HomeFragment.OnFragm
             }
         });
     }
+
+    private void okHttpGetUser(){
+        Log.i("TAG","get_user_begin");
+runOnUiThread(new Runnable() {
+    @Override
+    public void run() {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("http://39.105.180.206:9000/all_user")
+                .header("X-Token",token)
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.i("TAG","get_user_fail");
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                //此方法运行在子线程中，不能在此方法中进行UI操作。
+                    String jsondata = response.body().string();
+                    //解析
+                    try {
+                        jsonJXUser(jsondata,response);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    response.body().close();
+                }
+        });
+    }
+});
+
+
+    }
+
     public int total_count;
     private void jsonGetbossData(String jsondata,Response response) throws JSONException {//解析JSON
         Log.i("TAG","--jiexi_Get_begin-");
@@ -317,7 +361,7 @@ public class bosszp_jobActivity extends Activity implements HomeFragment.OnFragm
 
                 String company_name = jsonObject1.getString("company_name");
 
-                String hr_info = null;
+                String create_time = jsonObject1.getString("created_at");
 
                 String job_area = jsonObject1.getString("job_area");
 
@@ -348,7 +392,7 @@ public class bosszp_jobActivity extends Activity implements HomeFragment.OnFragm
                 boolean get_is_full = jsonObject1.getBoolean("is_full");
 
                 JobClass job = new JobClass(job_id,job_name,job_area,salary,long_tag_list,
-                        hr_info,company_name,company_tag_list,job_url,get_is_full);
+                        create_time,company_name,company_tag_list,job_url,get_is_full);
                 mJobsList.add(job);
             }
             runOnUiThread(new Runnable() {
@@ -367,6 +411,24 @@ public class bosszp_jobActivity extends Activity implements HomeFragment.OnFragm
                     myAdapter.setFooterView(footer_view);
                 }
             });
+        }
+    }
+
+    private void jsonJXUser(String jsondata,Response response) throws JSONException {//解析JSON
+        Log.i("TAG", "--jiexi_Get_begin-");
+
+        if (jsondata != null) {
+            JSONObject jsonObject = new JSONObject(jsondata);
+            total_count_of_users = jsonObject.getInt("total_count");
+
+            JSONArray jobs = jsonObject.getJSONArray("users");//遍历JSONArray对象，解析后放入集合中
+            for (int time = 0; time < jobs.length(); time++) {
+                JSONObject jsonObject1 = jobs.getJSONObject(time);
+                int user_id = jsonObject1.getInt("user_id");
+
+                String user_name = jsonObject1.getString("user_name");
+                usermap.put(user_id,user_name);
+            }
         }
     }
 
@@ -445,6 +507,8 @@ class MyAdapter extends RecyclerView.Adapter<MyViewHoder> {
             }
         });
     }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHoder holder, int position) {
@@ -543,5 +607,7 @@ class MyViewHoder extends RecyclerView.ViewHolder implements View.OnClickListene
 private interface IMyViewHolderClicks{
         public void onItemClick(View view,int jobClass);
 }
+
+
 
 }

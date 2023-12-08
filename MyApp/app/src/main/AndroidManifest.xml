@@ -4,6 +4,8 @@
     package="com.example.myappli">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -67,6 +69,10 @@
         <activity android:name=".user.ReminderActivity"
             android:exported="true"/>
         <activity android:name=".user.RemindAddActivity"
+            android:exported="true"/>
+        <activity android:name=".chat.ListActivity"
+            android:exported="true"/>
+        <activity android:name=".chat.History_Send_Activity"
             android:exported="true"/>
 
     </application>
