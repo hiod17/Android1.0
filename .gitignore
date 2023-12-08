@@ -1,0 +1,13 @@
+MyApp/app/build
+MyApp/*.iml
+MyApp/.gradle
+MyApp/local.properties
+MyApp/.idea/caches
+MyApp/.idea/libraries
+MyApp/.idea/modules.xml
+MyApp/.idea/workspace.xml
+MyApp/.idea/navEditor.xml
+MyApp/.idea/assetWizardSettings.xml
+MyApp/.DS_Store
+MyApp/captures
+MyApp/local.properties
