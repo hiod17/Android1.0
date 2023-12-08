@@ -126,9 +126,9 @@ public class History_Send_Activity extends Activity {
     }
 
     class MyAdapter extends RecyclerView.Adapter<MyViewHoder> {
-        private final int HEADER_TYPE =0;
-        private final int FOOTER_TYPE =1;
-        private final int RIGHT_TYPE =2;
+        private final int HEADER_TYPE = 0;
+        private final int FOOTER_TYPE = 1;
+        private final int RIGHT_TYPE = 2;
         private final int LEFT_TYPE = 3;
         View headerView;
         View footerView;
